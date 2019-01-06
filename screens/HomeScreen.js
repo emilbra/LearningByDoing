@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Linking } from 'react-native';
 import {
   Image,
   Platform,
@@ -39,7 +40,7 @@ export default class HomeScreen extends React.Component {
             <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
               <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
             </View>
-
+              <Button title="Opwn URL with EXPO.WebBrowser" onPress={this._handleOpenWithWebBrowser} />
             <Text style={styles.getStartedText}>
               Change this text and your app will automatically reload.
             </Text>
@@ -85,7 +86,9 @@ export default class HomeScreen extends React.Component {
       );
     }
   }
-
+  _handleOpenWithWebBrowser = () => {
+    WebBrowser.openBrowserAsync('https://google.no')
+  }
   _handleLearnMorePress = () => {
     WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
   };
