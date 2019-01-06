@@ -4,6 +4,9 @@
     "slug": "LearningByDoing",
     "privacy": "public",
     "sdkVersion": "32.0.0",
+    "githubUrl": "https://github.com/emilbra/Brynn",
+    "orientation": "portrait",
+    "primaryColor": "#0000ff",
     "platforms": [
       "ios",
       "android"
