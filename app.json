@@ -6,14 +6,14 @@
     "sdkVersion": "32.0.0",
     "githubUrl": "https://github.com/emilbra/Brynn",
     "orientation": "portrait",
-    "primaryColor": "#0000ff",
+    "android.adaptiveIcon.backgroundColor": "#ffffff",
     "platforms": [
       "ios",
       "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/robot-dev.png",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",

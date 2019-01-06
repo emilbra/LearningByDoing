@@ -1,4 +1,5 @@
 import React from 'react';
+import { Foundation } from '@expo/vector-icons';
 import { Button, Linking } from 'react-native';
 import {
   Image,
@@ -40,10 +41,14 @@ export default class HomeScreen extends React.Component {
             <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
               <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
             </View>
-              <Button title="Opwn URL with EXPO.WebBrowser" onPress={this._handleOpenWithWebBrowser} />
+              <Button title="Open URL with EXPO.WebBrowser" onPress={this._handleOpenWithWebBrowser} />
             <Text style={styles.getStartedText}>
               Change this text and your app will automatically reload.
             </Text>
+            <Foundation name="mobile" size={30} color="blue" />
+                <Text style={styles.getStartedText}>
+                  +47 12345678
+                </Text>
           </View>
 
           <View style={styles.helpContainer}>
