@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { WebBrowser } from 'expo';
+import { WebBrowser, ImagePicker } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
@@ -18,8 +18,12 @@ export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
+  state = {
+    image: null,
+  };
 
   render() {
+    let { image } = this.state;
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -42,6 +46,7 @@ export default class HomeScreen extends React.Component {
               <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
             </View>
               <Button title="Open URL with EXPO.WebBrowser" onPress={this._handleOpenWithWebBrowser} />
+              <Button title="Last opp bilde" onPress={this._handleUploadPhoto} />
             <Text style={styles.getStartedText}>
               Change this text and your app will automatically reload.
             </Text>
@@ -94,6 +99,19 @@ export default class HomeScreen extends React.Component {
   _handleOpenWithWebBrowser = () => {
     WebBrowser.openBrowserAsync('https://google.no')
   }
+  _handleUploadPhoto = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      
+      allowsEditing: true,
+      aspect: [4,3],
+    });
+
+    console.log(result);
+
+    if(!result.cancelled) {
+      this.setState({ image: result.uri });
+    }
+  };
   _handleLearnMorePress = () => {
     WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
   };
