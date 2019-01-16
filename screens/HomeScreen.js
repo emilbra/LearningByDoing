@@ -45,7 +45,7 @@ export default class HomeScreen extends React.Component {
             <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
               <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
             </View>
-              <Button title="Open URL with EXPO.WebBrowser" onPress={this._handleOpenWithWebBrowser} />
+              <Button title="Go to Rainloop.thilde with EXPO.WebBrowser!" onPress={this._handleOpenWithWebBrowser} />
               <Button title="Last opp bilde" onPress={this._handleUploadPhoto} />
             <Text style={styles.getStartedText}>
               Change this text and your app will automatically reload.
@@ -97,7 +97,7 @@ export default class HomeScreen extends React.Component {
     }
   }
   _handleOpenWithWebBrowser = () => {
-    WebBrowser.openBrowserAsync('https://google.no')
+    WebBrowser.openBrowserAsync('https://rainloop.tihlde.org')
   }
   _handleUploadPhoto = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
