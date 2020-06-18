@@ -1,1 +1,1 @@
-Dette er en test for å sjekke at webhook fungerer mellom GitHub og Discord
+Dette er en test for å sjekke at webhook fungerer mellom GitHub og Discord.
